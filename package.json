@@ -1,0 +1,30 @@
+{
+  "name": "mongoose-transaction",
+  "version": "0.0.0",
+  "description": "A small library to provide an transaction-like process for mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "mongoose",
+    "transaction",
+    "mongodb"
+  ],
+  "author": "Anand S <anand.seenivasan@gmail.com>",
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {
+    "jquery-deferred": "^0.3.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "mongoose": "^4.0.5"
+  }
+}
