@@ -1,4 +1,5 @@
 describe("Transaction", function() {
+  console.log(__dirname);
   var mongoose = require('mongoose');
   mongoose.connect("mongodb://localhost/test");
   var userSchema = require("./helpers/userSchema");
