@@ -4,7 +4,7 @@
   "description": "A small library to provide an transaction-like process for mongoose",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "./node_modules/.bin/jasmine"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "jquery-deferred": "^0.3.0"
   },
   "devDependencies": {
-    "jasmine-node": "^1.14.5",
+    "jasmine": "^2.3.1",
     "mongoose": "^4.0.5"
   }
 }
