@@ -1,10 +1,10 @@
 describe("Transaction", function() {
-  console.log(__dirname);
+  var path = require('path');
   var mongoose = require('mongoose');
   mongoose.connect("mongodb://localhost/test");
-  var userSchema = require("./helpers/userSchema");
+  var userSchema = require(path.join(__dirname, "./helpers/userSchema"));
   mongoose.model('User', userSchema);
-  var Transaction = require('../index');
+  var Transaction = require(path.join(__dirname, '../index'));
 
 
   beforeEach(function(done) {
