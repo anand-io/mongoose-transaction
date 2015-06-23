@@ -17,7 +17,7 @@ transaction.insert('User', {userId:'someuser1' , emailId:'test email1'});
 transaction.update('User', id, {userId:'someuser2' , emailId:'test email2'});
 transaction.remove('User', id2);
 transaction.run(function(err, docs){
-  // you code here
+  // your code here
 });
 ```
 
