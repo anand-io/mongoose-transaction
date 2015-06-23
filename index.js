@@ -185,4 +185,8 @@ function Transaction (mongoose) {
 	}
 }
 
-module.exports = Transaction;
+module.exports = function(mongoose) {
+	return function (){
+		return new Transaction(mongoose);
+	};
+};

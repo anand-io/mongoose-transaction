@@ -10,9 +10,9 @@ Example:
 
 ```javascript
 var mongoose = require('mongoose');
-var Transaction = require('mongoose-transaction');
+var Transaction = require('mongoose-transaction')(mongoose);
   
-var transaction = new Transaction(mongoose);
+var transaction = new Transaction();
 transaction.insert('User', {userId:'someuser1' , emailId:'test email1'});
 transaction.update('User', id, {userId:'someuser2' , emailId:'test email2'});
 transaction.remove('User', id2);

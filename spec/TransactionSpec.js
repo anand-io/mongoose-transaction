@@ -3,7 +3,7 @@ describe("Transaction", function() {
   mongoose.connect("mongodb://localhost/test");
   var userSchema = require("./helpers/UserSchema");
   mongoose.model('User', userSchema);
-  var Transaction = require('../index');
+  var Transaction = require('../index')(mongoose);
 
 
   beforeEach(function(done) {
@@ -13,7 +13,7 @@ describe("Transaction", function() {
   });
 
   it("should properly insert User data into Db", function(done) {
-    var transaction = new Transaction(mongoose);
+    var transaction = new Transaction();
     transaction.insert('User', {userId:'someuser1' , emailId:'test email1'});
     transaction.run(function(err, docs){
         mongoose.model('User').findOne({userId:'someuser1'}, function(err, docs){
@@ -24,7 +24,7 @@ describe("Transaction", function() {
   });
 
   it("should rollback one insert when other insert fails", function(done) {
-    var transaction = new Transaction(mongoose);
+    var transaction = new Transaction();
     transaction.insert('User', {userId:'someuser1' , emailId:'test email1'});
     transaction.insert('User', {});
     transaction.run(function(err, docs){
@@ -39,7 +39,7 @@ describe("Transaction", function() {
     mongoose.model('User')({userId:'someuser1' , emailId:'test email1'}).save(function(err, doc){
       expect(doc).not.toBe(null);
       expect(doc.userId).toEqual("someuser1");
-      var transaction = new Transaction(mongoose);
+      var transaction = new Transaction();
       transaction.update('User', doc._id, {userId:'someuser2' , emailId:'test email2'});
       transaction.run(function(err, docs){
         mongoose.model('User').findOne({_id:doc._id}, function(err, docs){
@@ -54,7 +54,7 @@ describe("Transaction", function() {
     mongoose.model('User')({userId:'someuser1' , emailId:'test email1'}).save(function(err, doc){
       expect(doc).not.toBe(null);
       expect(doc.userId).toEqual("someuser1");
-      var transaction = new Transaction(mongoose);
+      var transaction = new Transaction();
       transaction.update('User', doc._id, {userId:'someuser2' , emailId:'test email2'});
       transaction.insert('User', {});
       transaction.run(function(err, docs){
@@ -70,7 +70,7 @@ describe("Transaction", function() {
     mongoose.model('User')({userId:'someuser1' , emailId:'test email1'}).save(function(err, doc){
       expect(doc).not.toBe(null);
       expect(doc.userId).toEqual("someuser1");
-      var transaction = new Transaction(mongoose);
+      var transaction = new Transaction();
       transaction.remove('User', doc._id);
       transaction.insert('User', {});
       transaction.run(function(err, docs){
