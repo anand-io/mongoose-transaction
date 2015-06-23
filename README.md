@@ -1,5 +1,7 @@
-# mongoose-transaction
+## mongoose-transaction
 A node module for transaction-like db writes
+
+[![Build Status](https://travis-ci.org/anand-seeenivasagam/mongoose-transaction.svg?branch=master)](https://travis-ci.org/anand-seeenivasagam/mongoose-transaction)
 
 mongoose-transaction handles insert, update and remove.
 
@@ -22,6 +24,6 @@ transaction.run(function(err, docs){
 ```
 
 To run the tests:
-```
+```javascript
 npm test
 ```
