@@ -1,6 +1,6 @@
 {
   "name": "mongoose-transaction",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A small library to provide an transaction-like process for mongoose",
   "main": "index.js",
   "scripts": {
