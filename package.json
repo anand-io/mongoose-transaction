@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/anand-seeenivasagam/mongoose-transaction.git"
   },
   "keywords": [
     "mongoose",
@@ -18,7 +18,7 @@
   "author": "Anand S <anand.seenivasan@gmail.com>",
   "license": "",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/anand-seeenivasagam/mongoose-transaction/issues"
   },
   "dependencies": {
     "jquery-deferred": "^0.3.0"
