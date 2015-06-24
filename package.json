@@ -1,6 +1,6 @@
 {
   "name": "mongoose-transaction",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A small library to provide an transaction-like process for mongoose",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "mongodb"
   ],
   "author": "Anand S <anand.seenivasan@gmail.com>",
-  "license": "",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/anand-seeenivasagam/mongoose-transaction/issues"
   },
