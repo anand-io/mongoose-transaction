@@ -2,6 +2,8 @@
 A node module for transaction-like db writes
 
 [![Build Status](https://travis-ci.org/anand-seeenivasagam/mongoose-transaction.svg?branch=master)](https://travis-ci.org/anand-seeenivasagam/mongoose-transaction)
+[![NPM Version](http://img.shields.io/npm/v/mongoose-transaction.svg?style=flat)](https://www.npmjs.org/package/mongoose-transaction)
+[![NPM Downloads](https://img.shields.io/npm/dm/mongoose-transaction.svg?style=flat)](https://www.npmjs.org/package/mongoose-transaction)
 
 mongoose-transaction handles insert, update and remove.
 
