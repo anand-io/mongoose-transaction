@@ -67,6 +67,8 @@ function Transaction (mongoose) {
 				  		$.when.apply($, rollbacksDeffered).done(function(docs){
 				  			callback(docs);
 				  		});
+				  	} else {
+				  		callback(errs, null);
 				  	}
 	  			} else {
 	  				callback(null, docs);
@@ -89,7 +91,7 @@ function Transaction (mongoose) {
 					task = constructUpdateTask(docData);
 				} else if (docData.type === 'remove') {
 					task = constructRemoveTask(docData);
-				}	
+				}
 				deferred.resolve(task);
 			}
 		});
