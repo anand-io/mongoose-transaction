@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "A small library to provide an transaction-like process for mongoose",
   "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "test": "./node_modules/.bin/jasmine"
   },
